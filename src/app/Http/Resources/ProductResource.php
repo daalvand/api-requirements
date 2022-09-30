@@ -1,0 +1,39 @@
+<?php
+
+namespace App\Http\Resources;
+
+use App\Models\Product;
+use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
+
+/**
+ * @mixin Product
+ */
+class ProductResource extends JsonResource
+{
+    /**
+     * Transform the resource into an array.
+     *
+     * @param Request $request
+     * @return array
+     */
+    public function toArray($request)
+    {
+        return [
+            'sku'      => $this->sku,
+            "name"     => $this->name,
+            "category" => $this->category,
+            "price"    => $this->getPrice()
+        ];
+    }
+
+    private function getPrice()
+    {
+        return [
+            "original"            => $this->price,
+            "final"               => $this->price - $this->discount * 100,
+            "discount_percentage" => $this->discount * 100,
+            "currency"            => $this->currency
+        ];
+    }
+}
