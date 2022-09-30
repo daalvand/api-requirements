@@ -1,0 +1,9 @@
+#src/.env
+#src/auth.json
+#src/vendor
+#src/storage/app/public/*
+#src/storage/framework/cache/data/*
+#src/storage/framework/sessions/*
+#src/storage/framework/views/*
+#src/storage/framework/testing/*
+#src/storage/logs/*
