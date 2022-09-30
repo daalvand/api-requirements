@@ -4,83 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "15a903a7454e8c529331dff4220424ea",
+    "content-hash": "95aab94e2886a970b91edc3c6ec25d8a",
     "packages": [
-        {
-            "name": "allysonsilva/laravel-artisan-domain-contexts",
-            "version": "v2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/allysonsilva/laravel-artisan-domain-contexts.git",
-                "reference": "1645b1a94d0ceba1e0fd1d225d636e9ed626f248"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/allysonsilva/laravel-artisan-domain-contexts/zipball/1645b1a94d0ceba1e0fd1d225d636e9ed626f248",
-                "reference": "1645b1a94d0ceba1e0fd1d225d636e9ed626f248",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": "^9.0",
-                "nikic/php-parser": "^4.13",
-                "php": ">=8.0"
-            },
-            "require-dev": {
-                "ergebnis/phpstan-rules": "^1.0",
-                "nunomaduro/larastan": "^2.0",
-                "orchestra/testbench": "^7.0",
-                "phpmd/phpmd": "^2.11",
-                "phpstan/phpstan": "^1.0",
-                "phpstan/phpstan-strict-rules": "^1.1",
-                "phpunit/phpunit": "^9.0",
-                "slevomat/coding-standard": "^7.0",
-                "squizlabs/php_codesniffer": "^3.6",
-                "symplify/phpstan-rules": "10.0.21"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Allyson\\ArtisanDomainContext\\ArtisanDomainContextServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Allyson\\ArtisanDomainContext\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Allyson Silva",
-                    "email": "dev@allyson.dev",
-                    "homepage": "https://allyson.dev",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A laravel package for using artisan commands in domain contexts",
-            "homepage": "https://github.com/allysonsilva/laravel-artisan-domain-contexts",
-            "keywords": [
-                "allyson",
-                "artisan",
-                "bounded-contexts",
-                "cli",
-                "console",
-                "ddd",
-                "domain-contexts",
-                "laravel",
-                "php"
-            ],
-            "support": {
-                "issues": "https://github.com/allysonsilva/laravel-artisan-domain-contexts/issues",
-                "source": "https://github.com/allysonsilva/laravel-artisan-domain-contexts/tree/v2.1.0"
-            },
-            "time": "2022-05-05T16:01:34+00:00"
-        },
         {
             "name": "brick/math",
             "version": "0.10.2",
