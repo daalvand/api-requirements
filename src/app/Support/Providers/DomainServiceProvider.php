@@ -15,7 +15,7 @@ class DomainServiceProvider extends ServiceProvider
 
     public function registerMigrations(): void
     {
-        $directories = File::glob(app_path('Domain/*/Database/Migrations/*.php'));
+        $directories = File::glob(app_path('Domain/*/Database/Migrations/'));
         $this->loadMigrationsFrom($directories);
     }
 }
