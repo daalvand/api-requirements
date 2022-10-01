@@ -17,7 +17,7 @@ class ProductResource extends JsonResource
      * @param Request $request
      * @return array
      */
-    public function toArray($request)
+    public function toArray($request): array
     {
         return [
             'sku'      => $this->sku,
@@ -27,7 +27,7 @@ class ProductResource extends JsonResource
         ];
     }
 
-    private function getPrice()
+    private function getPrice(): array
     {
         return [
             "original"            => $this->price,

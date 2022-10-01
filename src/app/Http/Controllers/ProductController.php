@@ -15,7 +15,7 @@ class ProductController extends Controller
         $inputs = $request->validated();
         $perPage = $inputs['per_page'] ?? 10;
         return ProductResource::collection(
-            Product::filter($inputs)->simplePaginate($perPage)
+            Product::filter($inputs)->simplePaginate($perPage)->appends($inputs)
         );
     }
 }
