@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use App\Enums\ProductCategory;
-use App\Http\Resources\Traits\HasDiscounts;
+use App\Models\Traits\HasDiscounts;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,7 +11,7 @@ class Product extends Model
 {
     use HasFactory, HasDiscounts;
 
-
+    public $timestamps = false;
     public const CURRENCY = 'EUR';
     protected $primaryKey = 'sku';
 

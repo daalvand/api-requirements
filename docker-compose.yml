@@ -5,6 +5,24 @@ networks:
     driver: bridge
 
 services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile-nginx
+      args:
+        - UID=${UID:-1000}
+        - GID=${GID:-1000}
+    container_name: JobTestServer
+    ports:
+      - ${NGINX_PORT:-80}:80
+    networks:
+      - JobTest
+    volumes:
+      - ./src:/var/www/html:delegated
+    restart: unless-stopped
+    links:
+      - app
+
   app:
     build:
       context: .
@@ -13,8 +31,6 @@ services:
         GID: ${GID:-1000}
     container_name: JobTestApp
     working_dir: /var/www/html
-    ports:
-      - ${APP_PORT:-8000}:8000
     extra_hosts:
       - host.docker.internal:host-gateway
     networks:
@@ -23,4 +39,3 @@ services:
       - ./src:/var/www/html
       - ./docker/home:/home/www-data
     restart: unless-stopped
-    command: [ "php", "artisan","serve", "--host=0.0.0.0"]

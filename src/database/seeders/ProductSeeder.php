@@ -17,7 +17,7 @@ class ProductSeeder extends Seeder
      */
     public function run(): void
     {
-        Product::insert($this->getDataset());
+        Product::upsert($this->getDataset(), 'sku');
     }
 
     /**

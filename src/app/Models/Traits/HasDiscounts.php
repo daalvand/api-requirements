@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Resources\Traits;
+namespace App\Models\Traits;
 
 use App\Enums\ProductCategory;
 

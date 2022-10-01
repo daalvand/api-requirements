@@ -10,7 +10,6 @@
         "ext-swoole": "*",
         "guzzlehttp/guzzle": "^7.5.0",
         "laravel/framework": "^9.32.0",
-        "laravel/octane": "^1.2",
         "laravel/sanctum": "^3.0.1",
         "laravel/tinker": "^2.7.2"
     },
