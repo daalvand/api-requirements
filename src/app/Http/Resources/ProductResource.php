@@ -32,8 +32,16 @@ class ProductResource extends JsonResource
         return [
             "original"            => $this->price,
             "final"               => $this->price - ($this->discount * $this->price),
-            "discount_percentage" => $this->discount ? $this->discount * 100 : null,
+            "discount_percentage" => $this->getDiscountPercent(),
             "currency"            => $this->currency
         ];
+    }
+
+    /**
+     * @return string|null
+     */
+    private function getDiscountPercent(): null|string
+    {
+        return $this->discount ? $this->discount * 100 . "%" : null;
     }
 }
