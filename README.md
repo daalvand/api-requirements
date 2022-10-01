@@ -1,6 +1,6 @@
 # api-requirements
 
-# run & installation
+## run & installation
 
 1. Copy .env.example to .env `cp .env.example .env`, then change default values. For getting UID and GID, run the following commands.
 ```shell
@@ -20,13 +20,23 @@
     docker-compose run --rm app php artisan key:generate
 ```
 
-5. Use the following command to launch the project:
+5. Run migrations:
+```shell
+    docker-compose run --rm app php artisan migration --seed
+```
+
+6. Use the following command to launch the project:
 
 ```shell
     docker-compose up --build -d
 ```
 
-6. Run migrations:
-```shell
-    docker-compose run --rm app php artisan migration --force
-```
+## usage
+
+### api filters:
+- category:    `/api/products?category=insurance`
+- price:       `/api/products?price=99000`
+- price range: `/api/products?price_range[min]=10000&price_range[max]=90000`
+- pagination:  `/api/products?page=1&per_page=12`
+
+**_NOTE:_** Use `Accept:application/json` header if you want see errors and so on
