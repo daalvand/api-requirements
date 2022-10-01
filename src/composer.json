@@ -6,8 +6,6 @@
     "license": "MIT",
     "require": {
         "php": "^8.1.0",
-        "ext-pdo": "*",
-        "ext-swoole": "*",
         "guzzlehttp/guzzle": "^7.5.0",
         "laravel/framework": "^9.32.0",
         "laravel/sanctum": "^3.0.1",

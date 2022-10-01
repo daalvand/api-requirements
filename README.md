@@ -12,17 +12,17 @@
 
 3. Run this command to install the dependencies:
 ```shell
-    docker-compose run --rm app composer install
+    docker-compose run --user=$(id -u) --rm app composer install
 ```
 
 4. Generate the key:
 ```shell
-    docker-compose run --rm app php artisan key:generate
+    docker-compose run --user=$(id -u) --rm app php artisan key:generate
 ```
 
 5. Run migrations:
 ```shell
-    docker-compose run --rm app php artisan migration --seed
+    docker-compose run --user=$(id -u) --rm app php artisan migration --seed
 ```
 
 6. Use the following command to launch the project:
