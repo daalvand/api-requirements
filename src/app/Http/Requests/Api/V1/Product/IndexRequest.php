@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Product;
+namespace App\Http\Requests\Api\V1\Product;
 
 use App\Enums\ProductCategory;
 use Illuminate\Foundation\Http\FormRequest;

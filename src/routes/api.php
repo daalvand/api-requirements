@@ -1,7 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use \Illuminate\Support\Facades\File;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,4 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-require __DIR__ . '/api/product.php';
+Route::prefix('v1')->as('v1.')->group(function () {
+    $files = File::glob(__DIR__ . '/api/v1/*.php');
+    foreach ($files as $file) {
+        require $file;
+    }
+});

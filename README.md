@@ -34,9 +34,9 @@
 ## usage
 
 ### api filters:
-- category:    `/api/products?category=insurance`
-- price:       `/api/products?price=99000`
-- price range: `/api/products?price_range[min]=10000&price_range[max]=90000`
-- pagination:  `/api/products?page=1&per_page=12`
+- category:    `/api/v1/products?category=insurance`
+- price:       `/api/v1/products?price=99000`
+- price range: `/api/v1/products?price_range[min]=10000&price_range[max]=90000`
+- pagination:  `/api/v1/products?page=1&per_page=12`
 
 **_NOTE:_** Use `Accept:application/json` header if you want see errors and so on
